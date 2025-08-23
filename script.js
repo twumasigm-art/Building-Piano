@@ -1,5 +1,9 @@
 // Vars
+const WHITE_KEYS=['Q','W','E','R','T','Y','U'];
+const BLACK_KEYS=['2','3','5','6','7'];
 
+const whiteKeys = document.querySelectorAll('.key.white');
+const blackKeys = document.querySelectorAll('.key.black');
 
 // Select all keys //
 const keys = document.querySelectorAll('.key');
@@ -29,4 +33,24 @@ function playNote(key) {
         key.classList.remove("active");
     });
 }
+
+document.addEventListener('keydown', (e) => {
+    // Get the key that triggered the event
+    const key = e.key;
+    const whiteKeyIndex = WHITE_KEYS.indexOf(key);
+    const blackKeyIndex = BLACK_KEYS.indexOf(key);
+
+    // If the key is being held down, don't play the note again
+    If (e.repeat) {
+        return;
+    }
+
+    if (whiteKeyIndex > -1) {
+        playNote(whiteKeys[whiteKeyIndex]);
+    }
+
+    if (blackKeyIndex > -1) {
+        playNote(blackKeys[blackKeyIndex]);
+    }
+});
 

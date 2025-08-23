@@ -22,7 +22,7 @@ body {
 
 .key {
     /* CSS variables */
-  height: calc(var(--width)* 4);
+  height: calc(var(--width) * 4);
   width: var(--width);
 }
 

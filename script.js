@@ -1,5 +1,5 @@
 // Vars
-const WHITE_KEYS=['Q','W','E','R','T','Y','U'];
+const WHITE_KEYS=['q','w','e','r','t','y','u'];
 const BLACK_KEYS=['2','3','5','6','7'];
 
 const whiteKeys = document.querySelectorAll('.key.white');
@@ -41,7 +41,7 @@ document.addEventListener('keydown', (e) => {
     const blackKeyIndex = BLACK_KEYS.indexOf(key);
 
     // If the key is being held down, don't play the note again
-    If (e.repeat) {
+    if (e.repeat) {
         return;
     }
 
